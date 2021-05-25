@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>ARCS: marker experiment</title>
+            <link type="text/css" rel="stylesheet" href="arcs.css">
+                <script src="../../build/arcs_browser.js" 
+                        data-base-url="../.." 
+                        data-arcsapp="arcsapp.json" 
+                        type="module">
+                </script>
+            <meta charset="UTF-8"> 
+    </head>
+    <body>
+        <!-- video id="video" width=320 height=240 autoplay="true" style="display: none;"></video -->
+        <video id="video" width=320 height=240 autoplay="true" loop="true" style="display: none;">
+            <source src="webcam2.webm" type="video/webm">
+        </video>
+
+        <canvas id="canvas"></canvas>
+        <div id="container" ><p id="overlay"></p></div>
+        <div id="contents">
+            <a id="logo" href="http://arcs.ibisc.univ-evry.fr"><img src="../../docs/arcs_logo.png" alt="ARCS"/></a>
+        </div>
+    </body>
+</html>

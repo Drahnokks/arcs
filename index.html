@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>CUBE AR</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+	</head>
+	<body>
+        <script src="./fas.js" type="text/javascript"></script>
+
+        <script type="module">
+
+        import XRSystem from './xrsystem.js';
+        import { App } from './app.js';
+
+            // self calling function
+        (async function() {
+        let supported = await navigator.xr.isSessionSupported('immersive-ar');
+
+        if (supported === true) {
+            let session = await navigator.xr.requestSession('immersive-ar');
+    
+            console.log(session.renderState);
+        }
+        })();
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function(){
+            const app = new App();
+            window.app = app;
+        });
+        </script>
+	</body>
+</html>
